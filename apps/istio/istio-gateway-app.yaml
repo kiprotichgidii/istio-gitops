@@ -5,6 +5,7 @@ metadata:
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/tracking-id: istio-stack:argoproj.io/Application:argocd/istio-ingress-gateway
 spec:
   project: default
   destination:

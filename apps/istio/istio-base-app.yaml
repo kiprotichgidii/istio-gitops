@@ -5,6 +5,7 @@ metadata:
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "0"   # CRDs first
+    argocd.argoproj.io/tracking-id: istio-stack:argoproj.io/Application:argocd/istio-base
 spec:
   project: default
   destination:
