@@ -16,16 +16,14 @@ spec:
     - repoURL: https://istio-release.storage.googleapis.com/charts
       chart: gateway
       targetRevision: 1.23.0
+      helm:
+        valueFiles:
+          - $values/apps/istio/istio-values/gateway-values.yaml
 
     - repoURL: https://github.com/kiprotichgidii/istio-gitops.git
       targetRevision: main
       ref: values
-
-  source:
-    helm:
-      valueFiles:
-        - $values/apps/istio/istio-values/gateway-values.yaml
-
+      
   syncPolicy:
     automated:
       prune: true
